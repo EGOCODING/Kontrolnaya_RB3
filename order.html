@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechShop — Оформление заказа</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">TechShop</a>
+      <button type="button" class="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="product.html">Товар</a></li>
+          <li><a href="order.html" aria-current="page">Заказ</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-header">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Главная</a></li>
+          <li>Оформление заказа</li>
+        </ol>
+        <h1>Оформление заказа</h1>
+        <p>Заполните форму — мы свяжемся с вами в течение 15 минут</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="alert alert-success" id="order-success" role="status" hidden tabindex="-1">
+          Спасибо! Заявка отправлена — мы свяжемся с вами в ближайшее время.
+        </div>
+
+        <div class="order-layout">
+          <form class="form-card" data-demo-form data-success-target="order-success" novalidate>
+            <h2 class="visually-hidden">Форма заказа</h2>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="o-name">Имя <span class="required">*</span></label>
+                <input type="text" id="o-name" name="name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="o-email">E-mail <span class="required">*</span></label>
+                <input type="email" id="o-email" name="email" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="o-phone">Телефон <span class="required">*</span></label>
+                <input type="tel" id="o-phone" name="phone" required autocomplete="tel" placeholder="+7 900 000-00-00">
+              </div>
+              <div class="form-field">
+                <label for="o-product">Товар <span class="required">*</span></label>
+                <select id="o-product" name="product" required>
+                  <option value="">Выберите товар</option>
+                  <option value="1">Смартфон Galaxy A55 — 34 990 ₽</option>
+                  <option value="2">iPhone 15 — 79 990 ₽</option>
+                  <option value="3">MacBook Air M3 — 109 990 ₽</option>
+                  <option value="4">AirPods Pro 2 — 19 990 ₽</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="o-address">Адрес доставки</label>
+              <input type="text" id="o-address" name="address" autocomplete="street-address">
+              <span class="hint">Необязательно — можно уточнить по телефону</span>
+            </div>
+
+            <div class="form-field">
+              <label for="o-comment">Комментарий</label>
+              <textarea id="o-comment" name="comment" rows="3" placeholder="Удобное время для звонка, пожелания"></textarea>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="o-agree" name="agree" required>
+              <label for="o-agree">Согласен на обработку персональных данных <span class="required">*</span></label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block form-submit">Отправить заявку</button>
+          </form>
+
+          <aside class="order-summary" aria-labelledby="summary-title">
+            <h2 id="summary-title">Ваш заказ</h2>
+            <div class="summary-row"><span>Смартфон Galaxy A55</span><span>34 990 ₽</span></div>
+            <div class="summary-row"><span>Доставка</span><span>Бесплатно</span></div>
+            <div class="summary-total"><span>Итого</span><span>34 990 ₽</span></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h3>TechShop</h3>
+          <p>Магазин современной техники с быстрой доставкой и гарантией качества.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Магазин</h3>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="order.html">Заказ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Помощь</h3>
+          <ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Возврат</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
+            <li><a href="mailto:info@techshop.ru">info@techshop.ru</a></li>
+            <li><a href="contacts.html">Все контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2026 TechShop. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

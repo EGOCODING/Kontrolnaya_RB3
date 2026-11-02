@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechShop — Каталог</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">TechShop</a>
+      <button type="button" class="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+          <li><a href="product.html">Товар</a></li>
+          <li><a href="order.html">Заказ</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-header">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Главная</a></li>
+          <li>Каталог</li>
+        </ol>
+        <h1>Каталог товаров</h1>
+        <p>Выберите категорию и оформите заказ</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="catalog-layout">
+          <aside class="filters" aria-labelledby="filters-title">
+            <h2 id="filters-title">Категории</h2>
+            <ul class="filter-list">
+              <li><button type="button" class="filter-btn" aria-pressed="true">Все</button></li>
+              <li><button type="button" class="filter-btn" aria-pressed="false">Смартфоны</button></li>
+              <li><button type="button" class="filter-btn" aria-pressed="false">Ноутбуки</button></li>
+              <li><button type="button" class="filter-btn" aria-pressed="false">Наушники</button></li>
+              <li><button type="button" class="filter-btn" aria-pressed="false">Планшеты</button></li>
+              <li><button type="button" class="filter-btn" aria-pressed="false">Умные часы</button></li>
+            </ul>
+          </aside>
+
+          <div class="catalog-main">
+            <div class="product-grid">
+              <article class="card">
+                <img class="card-img"
+                     src="https://picsum.photos/seed/phone01/640/480"
+                     srcset="https://picsum.photos/seed/phone01/480/360 480w,
+                             https://picsum.photos/seed/phone01/640/480 640w,
+                             https://picsum.photos/seed/phone01/960/720 960w"
+                     sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                     alt="Смартфон Galaxy A55" width="640" height="480" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title">Galaxy A55 <span class="badge badge-hit">Хит</span></h3>
+                  <p class="card-text">6.6" AMOLED, 8/256 ГБ, камера 50 МП</p>
+                  <p class="card-price">34 990 ₽ <del>39 990 ₽</del></p>
+                  <a href="product.html" class="btn btn-primary btn-block">Подробнее</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <img class="card-img"
+                     src="https://picsum.photos/seed/laptop01/640/480"
+                     srcset="https://picsum.photos/seed/laptop01/480/360 480w,
+                             https://picsum.photos/seed/laptop01/640/480 640w,
+                             https://picsum.photos/seed/laptop01/960/720 960w"
+                     sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                     alt="Ноутбук MacBook Air M3" width="640" height="480" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title">MacBook Air M3 <span class="badge badge-sale">Скидка</span></h3>
+                  <p class="card-text">13.6" Retina, 8/256 ГБ, до 18 часов</p>
+                  <p class="card-price">109 990 ₽ <del>119 990 ₽</del></p>
+                  <a href="product.html" class="btn btn-primary btn-block">Подробнее</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <img class="card-img"
+                     src="https://picsum.photos/seed/headphones01/640/480"
+                     srcset="https://picsum.photos/seed/headphones01/480/360 480w,
+                             https://picsum.photos/seed/headphones01/640/480 640w,
+                             https://picsum.photos/seed/headphones01/960/720 960w"
+                     sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                     alt="Наушники AirPods Pro 2" width="640" height="480" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title">AirPods Pro 2 <span class="badge badge-new">Новинка</span></h3>
+                  <p class="card-text">Активное шумоподавление, USB-C, MagSafe</p>
+                  <p class="card-price">19 990 ₽</p>
+                  <a href="product.html" class="btn btn-primary btn-block">Подробнее</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <img class="card-img"
+                     src="https://picsum.photos/seed/watch01/640/480"
+                     srcset="https://picsum.photos/seed/watch01/480/360 480w,
+                             https://picsum.photos/seed/watch01/640/480 640w,
+                             https://picsum.photos/seed/watch01/960/720 960w"
+                     sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                     alt="Умные часы Apple Watch Series 9" width="640" height="480" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title">Apple Watch S9 <span class="badge badge-new">Новинка</span></h3>
+                  <p class="card-text">45 мм, GPS, Always-On Retina</p>
+                  <p class="card-price">39 990 ₽</p>
+                  <a href="product.html" class="btn btn-primary btn-block">Подробнее</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <img class="card-img"
+                     src="https://picsum.photos/seed/tablet01/640/480"
+                     srcset="https://picsum.photos/seed/tablet01/480/360 480w,
+                             https://picsum.photos/seed/tablet01/640/480 640w,
+                             https://picsum.photos/seed/tablet01/960/720 960w"
+                     sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                     alt="Планшет iPad Air 11" width="640" height="480" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title">iPad Air 11</h3>
+                  <p class="card-text">11" Liquid Retina, 128 ГБ, чип M2</p>
+                  <p class="card-price">64 990 ₽</p>
+                  <a href="product.html" class="btn btn-primary btn-block">Подробнее</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <img class="card-img"
+                     src="https://picsum.photos/seed/phone02/640/480"
+                     srcset="https://picsum.photos/seed/phone02/480/360 480w,
+                             https://picsum.photos/seed/phone02/640/480 640w,
+                             https://picsum.photos/seed/phone02/960/720 960w"
+                     sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                     alt="Смартфон iPhone 15" width="640" height="480" loading="lazy">
+                <div class="card-body">
+                  <h3 class="card-title">iPhone 15 <span class="badge badge-new">Новинка</span></h3>
+                  <p class="card-text">6.1" OLED, 128 ГБ, чип A16 Bionic</p>
+                  <p class="card-price">79 990 ₽</p>
+                  <a href="product.html" class="btn btn-primary btn-block">Подробнее</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h3>TechShop</h3>
+          <p>Магазин современной техники с быстрой доставкой и гарантией качества.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Магазин</h3>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="order.html">Заказ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Помощь</h3>
+          <ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Возврат</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
+            <li><a href="mailto:info@techshop.ru">info@techshop.ru</a></li>
+            <li><a href="contacts.html">Все контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2026 TechShop. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechShop — Главная</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">TechShop</a>
+      <button type="button" class="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html" aria-current="page">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="product.html">Товар</a></li>
+          <li><a href="order.html">Заказ</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Техника, которая работает на тебя</h1>
+        <p>Смартфоны, ноутбуки, консоли и гаджеты — с быстрой доставкой по России</p>
+        <div class="hero-actions">
+          <a href="catalog.html" class="btn btn-light">Перейти в каталог</a>
+          <button type="button" class="btn btn-outline" data-modal-open>Оставить заявку</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Почему выбирают нас</h2>
+          <p>Мы делаем покупки удобными</p>
+        </div>
+        <div class="features-grid">
+          <article class="card">
+            <div class="card-body">
+              <h3 class="card-title">Быстрая доставка</h3>
+              <p class="card-text">Доставим заказ в течение 24 часов в любую точку города.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <h3 class="card-title">Гарантия качества</h3>
+              <p class="card-text">Все товары сертифицированы и имеют гарантию 12 месяцев.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <h3 class="card-title">Поддержка 24/7</h3>
+              <p class="card-text">Наши специалисты всегда готовы помочь с выбором.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Популярные товары</h2>
+          <p>Лучшее по мнению наших покупателей</p>
+        </div>
+        <div class="product-grid">
+          <article class="card">
+            <img class="card-img"
+                 src="https://picsum.photos/seed/phone01/640/480"
+                 srcset="https://picsum.photos/seed/phone01/480/360 480w,
+                         https://picsum.photos/seed/phone01/640/480 640w,
+                         https://picsum.photos/seed/phone01/960/720 960w"
+                 sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                 alt="Смартфон Galaxy A55" width="640" height="480" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">Смартфон Galaxy A55 <span class="badge badge-hit">Хит</span></h3>
+              <p class="card-text">6.6" AMOLED, 8/256 ГБ, камера 50 МП</p>
+              <p class="card-price">34 990 ₽ <del>39 990 ₽</del></p>
+              <a href="product.html" class="btn btn-primary btn-block">Подробнее</a>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img"
+                 src="https://picsum.photos/seed/laptop01/640/480"
+                 srcset="https://picsum.photos/seed/laptop01/480/360 480w,
+                         https://picsum.photos/seed/laptop01/640/480 640w,
+                         https://picsum.photos/seed/laptop01/960/720 960w"
+                 sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                 alt="Ноутбук MacBook Air M3" width="640" height="480" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">MacBook Air M3 <span class="badge badge-sale">Скидка</span></h3>
+              <p class="card-text">13.6" Retina, 8/256 ГБ, до 18 часов работы</p>
+              <p class="card-price">109 990 ₽ <del>119 990 ₽</del></p>
+              <a href="product.html" class="btn btn-primary btn-block">Подробнее</a>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img"
+                 src="https://picsum.photos/seed/headphones01/640/480"
+                 srcset="https://picsum.photos/seed/headphones01/480/360 480w,
+                         https://picsum.photos/seed/headphones01/640/480 640w,
+                         https://picsum.photos/seed/headphones01/960/720 960w"
+                 sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                 alt="Наушники AirPods Pro 2" width="640" height="480" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">AirPods Pro 2 <span class="badge badge-new">Новинка</span></h3>
+              <p class="card-text">Активное шумоподавление, USB-C, MagSafe</p>
+              <p class="card-price">19 990 ₽</p>
+              <a href="product.html" class="btn btn-primary btn-block">Подробнее</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h3>TechShop</h3>
+          <p>Магазин современной техники с быстрой доставкой и гарантией качества.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Магазин</h3>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="order.html">Заказ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Помощь</h3>
+          <ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Возврат</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
+            <li><a href="mailto:info@techshop.ru">info@techshop.ru</a></li>
+            <li><a href="contacts.html">Все контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2026 TechShop. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="callback-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-content">
+      <button type="button" class="modal-close" aria-label="Закрыть окно" data-modal-close>&times;</button>
+      <h2 id="modal-title">Заявка на консультацию</h2>
+      <form data-demo-form data-success-target="modal-success">
+        <div class="form-field">
+          <label for="m-name">Имя <span class="required">*</span></label>
+          <input type="text" id="m-name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="m-phone">Телефон <span class="required">*</span></label>
+          <input type="tel" id="m-phone" name="phone" required autocomplete="tel">
+        </div>
+        <div class="form-field">
+          <label for="m-email">E-mail</label>
+          <input type="email" id="m-email" name="email" autocomplete="email">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="m-agree" name="agree" required>
+          <label for="m-agree">Согласен на обработку персональных данных</label>
+        </div>
+        <div class="alert alert-success" id="modal-success" hidden tabindex="-1">
+          Спасибо! Заявка отправлена — мы скоро свяжемся.
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
