@@ -6,7 +6,7 @@
   --ink: #0a0a0a;
   --ink-soft: #404040;
   --muted: #737373;
-  --subtle: #a3a3a3;
+  --subtle: #6b6b6b;
   --line: #e5e5e5;
   --line-strong: #d4d4d4;
   --bg: #ffffff;
@@ -26,6 +26,7 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
 }
 
 img, video { max-width: 100%; height: auto; display: block; }
@@ -193,7 +194,7 @@ button { font: inherit; cursor: pointer; }
 .btn-outline {
   background: transparent;
   color: var(--ink);
-  border-color: var(--line-strong);
+  border-color: #8c8c8c;
 }
 .btn-outline:hover { border-color: var(--ink); }
 
@@ -228,6 +229,8 @@ button { font: inherit; cursor: pointer; }
   transition: border-color 0.15s;
 }
 .card:hover { border-color: var(--line-strong); }
+/* display: flex у .card перебивает стиль браузера для [hidden] */
+.card[hidden] { display: none; }
 
 .card-img {
   aspect-ratio: 4 / 3;
@@ -247,6 +250,7 @@ button { font: inherit; cursor: pointer; }
   margin-bottom: 6px;
   letter-spacing: -0.01em;
   line-height: 1.4;
+  overflow-wrap: break-word;
 }
 .card-text {
   color: var(--muted);
@@ -287,7 +291,7 @@ button { font: inherit; cursor: pointer; }
   vertical-align: middle;
   background: currentColor;
 }
-.badge-hit { color: #059669; }
+.badge-hit { color: #047857; }
 .badge-new { color: #1d4ed8; }
 .badge-sale { color: #dc2626; }
 
@@ -353,7 +357,7 @@ button { font: inherit; cursor: pointer; }
 .filter-btn {
   padding: 8px 14px;
   border-radius: var(--radius);
-  border: 1px solid var(--line);
+  border: 1px solid #8c8c8c;
   background: var(--bg);
   color: var(--ink-soft);
   font-weight: 500;
@@ -370,7 +374,12 @@ button { font: inherit; cursor: pointer; }
 }
 
 /* ===================== PRODUCT TABLE ===================== */
-.table-wrapper { border-radius: var(--radius-lg); overflow: hidden; }
+.table-wrapper {
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
 .product-table {
   width: 100%;
   background: var(--bg);
@@ -425,7 +434,7 @@ button { font: inherit; cursor: pointer; }
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 22px;
 }
 .form-row { display: block; }
 .form-field { margin-bottom: 20px; }
@@ -449,10 +458,10 @@ button { font: inherit; cursor: pointer; }
 .form-field textarea {
   width: 100%;
   padding: 11px 14px;
-  border: 1px solid var(--line-strong);
+  border: 1px solid #8c8c8c;
   border-radius: var(--radius);
   font: inherit;
-  font-size: 15px;
+  font-size: 16px;
   background: var(--bg);
   color: var(--ink);
   transition: border-color 0.15s, box-shadow 0.15s;
@@ -547,7 +556,7 @@ button { font: inherit; cursor: pointer; }
   border-radius: var(--radius-lg);
   max-width: 440px;
   width: 100%;
-  padding: 32px;
+  padding: 22px;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
@@ -656,7 +665,7 @@ button { font: inherit; cursor: pointer; }
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: 22px;
   margin-bottom: 20px;
 }
 .contact-card h2 {
@@ -717,3 +726,26 @@ button { font: inherit; cursor: pointer; }
 
 /* ================ АНИМ ========*/
 
+
+/* ===================== Адаптивные помощники ===================== */
+.card picture,
+.product-hero-img picture { display: block; }
+
+.contact-note {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  margin: 40px 0 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.catalog-status {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 16px;
+}

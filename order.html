@@ -28,7 +28,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <div class="page-header">
       <div class="container">
         <ol class="breadcrumb">
@@ -80,8 +80,8 @@
 
             <div class="form-field">
               <label for="o-address">Адрес доставки</label>
-              <input type="text" id="o-address" name="address" autocomplete="street-address">
-              <span class="hint">Необязательно — можно уточнить по телефону</span>
+              <input type="text" id="o-address" name="address" autocomplete="street-address" aria-describedby="o-address-hint">
+              <span class="hint" id="o-address-hint">Необязательно — можно уточнить по телефону</span>
             </div>
 
             <div class="form-field">
@@ -126,9 +126,9 @@
         <div class="footer-col">
           <h3>Помощь</h3>
           <ul>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Возврат</a></li>
+            <li><a href="contacts.html">Доставка</a></li>
+            <li><a href="contacts.html">Гарантия</a></li>
+            <li><a href="contacts.html">Возврат</a></li>
           </ul>
         </div>
         <div class="footer-col">

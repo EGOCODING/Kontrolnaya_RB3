@@ -8,6 +8,10 @@
 @media (min-width: 640px) {
   .container { padding: 0 28px; }
 
+  .form-card { padding: 32px; }
+  .contact-card { padding: 28px; }
+  .modal-content { padding: 32px; }
+
   .hero { padding: 100px 0 88px; }
   .hero h1 { font-size: 2.6rem; }
   .hero p { font-size: 1.05rem; }
@@ -102,8 +106,8 @@
     align-items: flex-start;
   }
 
-  /* Table — классический вид */
-  .product-table { display: table; }
+  /* Таблица — классический вид, при нехватке места скроллится только .table-wrapper */
+  .product-table { display: table; min-width: 640px; }
   .product-table thead {
     position: static;
     width: auto;
@@ -139,6 +143,11 @@
   }
   .product-table td { font-size: 14px; font-weight: 500; }
   .product-table tr { border-bottom: 1px solid var(--line); }
+
+  /* Сетки не должны растягиваться содержимым */
+  .product-layout > *,
+  .order-layout > *,
+  .contacts-layout > * { min-width: 0; }
 }
 
 /* ===================== 1024px+ — Desktop ===================== */
@@ -290,6 +299,8 @@
 
   .page-header { padding: 80px 0; }
   .page-header h1 { font-size: 2.8rem; }
+
+  .section-heading { font-size: 1.6rem; margin-top: 56px; }
 
   .card-img { aspect-ratio: 4 / 3; }
   .card-body { padding: 24px; }

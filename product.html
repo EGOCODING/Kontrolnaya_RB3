@@ -28,7 +28,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <div class="page-header">
       <div class="container">
         <ol class="breadcrumb">
@@ -45,12 +45,15 @@
       <div class="container">
         <div class="product-layout">
           <div class="product-hero-img">
-            <img src="https://picsum.photos/seed/phone01/640/480"
-                 srcset="https://picsum.photos/seed/phone01/480/360 480w,
-                         https://picsum.photos/seed/phone01/640/480 640w,
-                         https://picsum.photos/seed/phone01/960/720 960w"
-                 sizes="(min-width: 768px) 50vw, 100vw"
-                 alt="Смартфон Galaxy A55 спереди" width="640" height="480">
+            <picture>
+              <source type="image/webp"
+                      srcset="images/phone01-480.webp 480w, images/phone01-640.webp 640w, images/phone01-960.webp 960w"
+                      sizes="(min-width: 768px) 50vw, 100vw">
+              <img src="images/phone01-640.jpg"
+                   srcset="images/phone01-480.jpg 480w, images/phone01-640.jpg 640w, images/phone01-960.jpg 960w"
+                   sizes="(min-width: 768px) 50vw, 100vw"
+                   alt="Смартфон Galaxy A55 спереди" width="640" height="480" decoding="async">
+            </picture>
           </div>
           <div class="product-info">
             <h2 class="visually-hidden">Информация о товаре</h2>
@@ -65,7 +68,7 @@
           </div>
         </div>
 
-        <h2 class="mb-3" style="margin-top: 40px;">Характеристики</h2>
+        <h2 class="section-heading">Характеристики</h2>
         <div class="table-wrapper">
           <table class="product-table">
             <caption>Технические характеристики смартфона Galaxy A55</caption>
@@ -109,9 +112,9 @@
         <div class="footer-col">
           <h3>Помощь</h3>
           <ul>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Возврат</a></li>
+            <li><a href="contacts.html">Доставка</a></li>
+            <li><a href="contacts.html">Гарантия</a></li>
+            <li><a href="contacts.html">Возврат</a></li>
           </ul>
         </div>
         <div class="footer-col">

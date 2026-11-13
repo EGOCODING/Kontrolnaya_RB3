@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты магазина техники TechShop: телефон, почта, адрес и форма обратной связи.">
   <title>TechShop — Контакты</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -28,7 +29,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <div class="page-header">
       <div class="container">
         <ol class="breadcrumb">
@@ -60,4 +61,98 @@
             </div>
           </div>
 
-          <div
+          <div>
+            <div class="form-card">
+              <h2>Написать нам</h2>
+              <p class="contact-note">Ответим на сообщение в течение рабочего дня.</p>
+
+              <div class="alert alert-success" id="contact-success" role="status" hidden tabindex="-1">
+                Спасибо! Сообщение отправлено — мы скоро ответим.
+              </div>
+
+              <form data-demo-form data-success-target="contact-success" novalidate>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="c-name">Имя <span class="required">*</span></label>
+                    <input type="text" id="c-name" name="name" required autocomplete="name">
+                  </div>
+                  <div class="form-field">
+                    <label for="c-email">E-mail <span class="required">*</span></label>
+                    <input type="email" id="c-email" name="email" required autocomplete="email">
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="c-phone">Телефон</label>
+                  <input type="tel" id="c-phone" name="phone" autocomplete="tel" placeholder="+7 900 000-00-00" aria-describedby="c-phone-hint">
+                  <span class="hint" id="c-phone-hint">Необязательно — можно ответить на письмо</span>
+                </div>
+
+                <div class="form-field">
+                  <label for="c-topic">Тема обращения</label>
+                  <select id="c-topic" name="topic">
+                    <option value="order">Вопрос по заказу</option>
+                    <option value="delivery">Доставка</option>
+                    <option value="warranty">Гарантия и возврат</option>
+                    <option value="other">Другое</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="c-message">Сообщение <span class="required">*</span></label>
+                  <textarea id="c-message" name="message" rows="5" required placeholder="Опишите ваш вопрос"></textarea>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" id="c-agree" name="agree" required>
+                  <label for="c-agree">Согласен на обработку персональных данных <span class="required">*</span></label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block form-submit">Отправить сообщение</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h3>TechShop</h3>
+          <p>Магазин современной техники с быстрой доставкой и гарантией качества.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Магазин</h3>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="order.html">Заказ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Помощь</h3>
+          <ul>
+            <li><a href="contacts.html">Доставка</a></li>
+            <li><a href="contacts.html">Гарантия</a></li>
+            <li><a href="contacts.html">Возврат</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
+            <li><a href="mailto:info@techshop.ru">info@techshop.ru</a></li>
+            <li><a href="contacts.html">Все контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2026 TechShop. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

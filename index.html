@@ -28,7 +28,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="hero">
       <div class="container">
         <h1>Техника, которая работает на тебя</h1>
@@ -77,13 +77,16 @@
         </div>
         <div class="product-grid">
           <article class="card">
-            <img class="card-img"
-                 src="https://picsum.photos/seed/phone01/640/480"
-                 srcset="https://picsum.photos/seed/phone01/480/360 480w,
-                         https://picsum.photos/seed/phone01/640/480 640w,
-                         https://picsum.photos/seed/phone01/960/720 960w"
-                 sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                 alt="Смартфон Galaxy A55" width="640" height="480" loading="lazy">
+            <picture>
+              <source type="image/webp"
+                      srcset="images/phone01-480.webp 480w, images/phone01-640.webp 640w, images/phone01-960.webp 960w"
+                      sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw">
+              <img class="card-img"
+                   src="images/phone01-640.jpg"
+                   srcset="images/phone01-480.jpg 480w, images/phone01-640.jpg 640w, images/phone01-960.jpg 960w"
+                   sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                   alt="Смартфон Galaxy A55" width="640" height="480" loading="lazy" decoding="async">
+            </picture>
             <div class="card-body">
               <h3 class="card-title">Смартфон Galaxy A55 <span class="badge badge-hit">Хит</span></h3>
               <p class="card-text">6.6" AMOLED, 8/256 ГБ, камера 50 МП</p>
@@ -93,10 +96,10 @@
           </article>
           <article class="card">
             <img class="card-img"
-                 src="https://picsum.photos/seed/laptop01/640/480"
-                 srcset="https://picsum.photos/seed/laptop01/480/360 480w,
-                         https://picsum.photos/seed/laptop01/640/480 640w,
-                         https://picsum.photos/seed/laptop01/960/720 960w"
+                 src="images/laptop01-640.jpg"
+                 srcset="images/laptop01-480.jpg 480w,
+                         images/laptop01-640.jpg 640w,
+                         images/laptop01-960.jpg 960w"
                  sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                  alt="Ноутбук MacBook Air M3" width="640" height="480" loading="lazy">
             <div class="card-body">
@@ -108,10 +111,10 @@
           </article>
           <article class="card">
             <img class="card-img"
-                 src="https://picsum.photos/seed/headphones01/640/480"
-                 srcset="https://picsum.photos/seed/headphones01/480/360 480w,
-                         https://picsum.photos/seed/headphones01/640/480 640w,
-                         https://picsum.photos/seed/headphones01/960/720 960w"
+                 src="images/headphones01-640.jpg"
+                 srcset="images/headphones01-480.jpg 480w,
+                         images/headphones01-640.jpg 640w,
+                         images/headphones01-960.jpg 960w"
                  sizes="(min-width: 1440px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                  alt="Наушники AirPods Pro 2" width="640" height="480" loading="lazy">
             <div class="card-body">
@@ -144,9 +147,9 @@
         <div class="footer-col">
           <h3>Помощь</h3>
           <ul>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Возврат</a></li>
+            <li><a href="contacts.html">Доставка</a></li>
+            <li><a href="contacts.html">Гарантия</a></li>
+            <li><a href="contacts.html">Возврат</a></li>
           </ul>
         </div>
         <div class="footer-col">
