@@ -34,10 +34,10 @@
         <ol class="breadcrumb">
           <li><a href="index.html">Главная</a></li>
           <li><a href="catalog.html">Каталог</a></li>
-          <li>Смартфон Galaxy A55</li>
+          <li id="product-crumb">Смартфон Galaxy A55</li>
         </ol>
-        <h1>Смартфон Galaxy A55</h1>
-        <p>Артикул EL-001 · Категория: Смартфоны</p>
+        <h1 id="product-title">Смартфон Galaxy A55</h1>
+        <p id="product-meta">Артикул EL-001 · Категория: Смартфоны</p>
       </div>
     </div>
 
@@ -46,10 +46,10 @@
         <div class="product-layout">
           <div class="product-hero-img">
             <picture>
-              <source type="image/webp"
+              <source type="image/webp" id="product-source"
                       srcset="images/phone01-480.webp 480w, images/phone01-640.webp 640w, images/phone01-960.webp 960w"
                       sizes="(min-width: 768px) 50vw, 100vw">
-              <img src="images/phone01-640.jpg"
+              <img id="product-image" src="images/phone01-640.jpg"
                    srcset="images/phone01-480.jpg 480w, images/phone01-640.jpg 640w, images/phone01-960.jpg 960w"
                    sizes="(min-width: 768px) 50vw, 100vw"
                    alt="Смартфон Galaxy A55 спереди" width="640" height="480" decoding="async">
@@ -58,10 +58,10 @@
           <div class="product-info">
             <h2 class="visually-hidden">Информация о товаре</h2>
             <p class="product-meta">Рейтинг: 4.8 из 5 · В наличии</p>
-            <p class="product-price">34 990 ₽ <del>39 990 ₽</del></p>
-            <p>Флагманский смартфон с безрамочным 6.6" AMOLED-дисплеем, процессором Exynos 1480 и тройной камерой 50 МП. Идеален для игр, съёмки и повседневной работы.</p>
+            <p class="product-price" id="product-price">34 990 ₽ <del>39 990 ₽</del></p>
+            <p id="product-description">Флагманский смартфон с безрамочным 6.6" AMOLED-дисплеем, процессором Exynos 1480 и тройной камерой 50 МП. Идеален для игр, съёмки и повседневной работы.</p>
             <div class="product-actions">
-              <a href="order.html" class="btn btn-primary">Оформить заявку</a>
+              <a href="order.html?product=phone01" class="btn btn-primary" id="product-order-link">Оформить заявку</a>
               <button type="button" class="btn btn-outline" data-modal-open>Задать вопрос</button>
             </div>
             <div class="alert alert-info">Бесплатная доставка при заказе от 5000 ₽</div>
@@ -71,14 +71,14 @@
         <h2 class="section-heading">Характеристики</h2>
         <div class="table-wrapper">
           <table class="product-table">
-            <caption>Технические характеристики смартфона Galaxy A55</caption>
+            <caption id="product-caption">Технические характеристики смартфона Galaxy A55</caption>
             <thead>
               <tr>
                 <th scope="col">Характеристика</th>
                 <th scope="col">Значение</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="product-specs">
               <tr><th scope="row">Экран</th><td>6.6" Super AMOLED, 120 Гц</td></tr>
               <tr><th scope="row">Процессор</th><td>Exynos 1480</td></tr>
               <tr><th scope="row">Память</th><td>8 ГБ ОЗУ / 256 ГБ</td></tr>
