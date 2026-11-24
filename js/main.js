@@ -115,6 +115,8 @@ document.addEventListener('DOMContentLoaded', function () {
         alertEl.focus();
       }
       form.reset();
+      /* Если на странице есть выбор товара — возвращаем сводку заказа в исходное состояние */
+      if (typeof updateSummary === 'function') updateSummary();
     });
   });
 
@@ -155,4 +157,36 @@ document.addEventListener('DOMContentLoaded', function () {
       applyFilter(btn.dataset.filter);
     });
   });
+
+  /* ===== Сводка заказа ===== */
+  var orderProduct = document.getElementById('o-product');
+  var summaryProduct = document.getElementById('summary-product');
+  var summaryPrice = document.getElementById('summary-price');
+  var summaryTotal = document.getElementById('summary-total');
+
+  function formatPrice(value) {
+    return String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽';
+  }
+
+  function updateSummary() {
+    if (!orderProduct || !summaryProduct) return;
+
+    var option = orderProduct.options[orderProduct.selectedIndex];
+    if (!option || !option.value) {
+      summaryProduct.textContent = 'Товар не выбран';
+      summaryPrice.textContent = '—';
+      if (summaryTotal) summaryTotal.textContent = '—';
+      return;
+    }
+
+    var price = Number(option.dataset.price || 0);
+    summaryProduct.textContent = option.dataset.title || option.textContent;
+    summaryPrice.textContent = formatPrice(price);
+    if (summaryTotal) summaryTotal.textContent = formatPrice(price);
+  }
+
+  if (orderProduct) {
+    orderProduct.addEventListener('change', updateSummary);
+    updateSummary();
+  }
 });

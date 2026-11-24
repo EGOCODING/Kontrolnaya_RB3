@@ -70,10 +70,10 @@
                 <label for="o-product">Товар <span class="required">*</span></label>
                 <select id="o-product" name="product" required>
                   <option value="">Выберите товар</option>
-                  <option value="1">Смартфон Galaxy A55 — 34 990 ₽</option>
-                  <option value="2">iPhone 15 — 79 990 ₽</option>
-                  <option value="3">MacBook Air M3 — 109 990 ₽</option>
-                  <option value="4">AirPods Pro 2 — 19 990 ₽</option>
+                  <option value="1" data-title="Смартфон Galaxy A55" data-price="34990">Смартфон Galaxy A55 — 34 990 ₽</option>
+                  <option value="2" data-title="iPhone 15" data-price="79990">iPhone 15 — 79 990 ₽</option>
+                  <option value="3" data-title="MacBook Air M3" data-price="109990">MacBook Air M3 — 109 990 ₽</option>
+                  <option value="4" data-title="AirPods Pro 2" data-price="19990">AirPods Pro 2 — 19 990 ₽</option>
                 </select>
               </div>
             </div>
@@ -99,9 +99,9 @@
 
           <aside class="order-summary" aria-labelledby="summary-title">
             <h2 id="summary-title">Ваш заказ</h2>
-            <div class="summary-row"><span>Смартфон Galaxy A55</span><span>34 990 ₽</span></div>
+            <div class="summary-row"><span id="summary-product">Товар не выбран</span><span id="summary-price">—</span></div>
             <div class="summary-row"><span>Доставка</span><span>Бесплатно</span></div>
-            <div class="summary-total"><span>Итого</span><span>34 990 ₽</span></div>
+            <div class="summary-total"><span>Итого</span><span id="summary-total">—</span></div>
           </aside>
         </div>
       </div>
